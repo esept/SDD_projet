@@ -1,0 +1,6 @@
+# Introduction 
+La plateforme Hugging Face est un site renommé dans le domaine de l'intelligence artificielle, très prisé par les développeurs et chercheurs. Cette plateforme est un centre où les utilisateurs partagent des applications basées sur des modèles Transformer, présentant non seulement l'état actuel de la technologie mais aussi les tendances futures en intelligence artificielle.
+
+Pour cette raison, j'ai décidé d'utiliser les jeux de données et les informations sur les modèles disponibles sur le site web de Hugging Face pour ma recherche. En utilisant l'API Hugging Face Hub, j'ai accédé à toutes les informations sur les jeux de données et aux données sur les modèles téléchargés plus de 10 fois sur le site. Ces données brutes comprennent des détails riches sur "la langue," "les tâches," et "le timing." En analysant ces données en profondeur, je crois que l'on peut obtenir des aperçus sur les caractéristiques des modèles pour différents types de tâches, leurs périodes de développement de pointe, et les avancements en intelligence artificielle sur l'architecture Transformer.
+
+# 
