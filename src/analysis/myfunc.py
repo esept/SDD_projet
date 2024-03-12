@@ -9,7 +9,7 @@ def process_time(df):
     df['created_time'] = pd.to_datetime(df['created_at'])
     df['YM'] = df['created_time'].dt.to_period('M')
 
-def show_count_per_month(cols):
+def show_count_per_month(df,cols):
     for i in cols:
         model_month = df[df[i] == 1]['YM'].value_counts()
         modelss = model_month.cumsum()
@@ -21,7 +21,7 @@ def show_count_per_month(cols):
         plt.xticks(rotation = 45)
         plt.show()
 
-def show_sum_per_month(cols):
+def show_sum_per_month(df,cols):
     for i in cols:
         model_month = df[df[i] == 1].groupby('YM')['downloads'].sum()
         modelss = model_month.cumsum()
@@ -36,13 +36,11 @@ def show_sum_per_month(cols):
 
 if __name__ == "__main__":
     df = pd.read_csv(path)
-    print(df.head())
     process_time(df)
-    print(df.columns)
     col_frameworks = ['framework_torch','framework_jax', 'framework_onnx', 'framework_tensorflow','framework_keras']
-    show_count_per_month(col_frameworks)
-    show_sum_per_month(col_frameworks)
+    # show_count_per_month(col_frameworks)
+    # show_sum_per_month(col_frameworks)
     col_ONEHOT = ['ONEHOT_endpoints_compatible', 'ONEHOT_autotrain_compatible','ONEHOT_safetensors', 'ONEHOT_tensorboard', 'ONEHOT_has_space']
-    show_count_per_month(col_ONEHOT)
-    show_sum_per_month(col_ONEHOT)
+    # show_count_per_month(col_ONEHOT)
+    # show_sum_per_month(col_ONEHOT)
 
